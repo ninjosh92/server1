@@ -16,6 +16,8 @@ namespace sever1
             //IPAddress ipAddress = IPAddress.Parse("192.168.254.37");
             TcpListener listener = new TcpListener(System.Net.IPAddress.Any, 49152);
 
+            listenToClient();
+
             listener.Start();
             while (true)
             {
