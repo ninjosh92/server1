@@ -2,6 +2,7 @@
 using System;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 using System.Net;
 
@@ -16,8 +17,13 @@ namespace sever1
             //IPAddress ipAddress = IPAddress.Parse("192.168.254.37");
             TcpListener listener = new TcpListener(System.Net.IPAddress.Any, 49152);
 
-            listenToClient();
+            listenToClient(listener);
 
+            
+        }
+
+        private static void listenToClient(TcpListener listener)
+        {
             listener.Start();
             while (true)
             {
@@ -50,11 +56,6 @@ namespace sever1
                     sw.WriteLine(e.ToString());
                 }
             }
-        }
-
-        private static void listenToClient()
-        {
-            throw new NotImplementedException();
         }
     }
 }
