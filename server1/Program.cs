@@ -54,7 +54,7 @@ namespace sever1
 
         private static void listenToClient()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
